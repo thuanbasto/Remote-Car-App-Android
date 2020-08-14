@@ -25,11 +25,5 @@
             android:text="Speech"
             android:background="@android:color/holo_green_dark"/>
 
-        <Button
-            android:id="@+id/buttonGyroscope"
-            android:layout_width="match_parent"
-            android:layout_height="@android:dimen/thumbnail_height"
-            android:text="Gyroscope"
-            android:background="@android:color/holo_purple"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

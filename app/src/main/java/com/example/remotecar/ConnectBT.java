@@ -5,7 +5,6 @@ import android.bluetooth.BluetoothDevice;
 import android.bluetooth.BluetoothSocket;
 import android.os.Build;
 import android.util.Log;
-import android.widget.Toast;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -15,15 +14,21 @@ import java.util.UUID;
 public class ConnectBT {
     // SPP UUID service: port giao tiep giua HC-06 vs device
     public static final UUID MY_UUID = UUID.fromString("00001101-0000-1000-8000-00805f9b34fb");
+    public String currentAddress = "";
+    // Adapter dùng để chuyển đỗi giữa HC-06 và Bluetooth
     public BluetoothAdapter btAdapter;
+    // socket giữa đt vs xe
     public BluetoothSocket btSocket = null;
+    // truyền dữ liệu
     public OutputStream outStream = null;
 
     public ConnectBT(BluetoothAdapter btAdapter) {
         this.btAdapter = btAdapter;
     }
 
+    // Hàm kết nối xe với điện thoại
     public boolean Connect(String address){
+        currentAddress = address;
         BluetoothDevice device = btAdapter.getRemoteDevice(address);
         try {
             btSocket = createBluetoothSocket(device);

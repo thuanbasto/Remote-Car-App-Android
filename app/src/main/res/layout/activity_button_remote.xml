@@ -69,5 +69,12 @@
                 android:layout_marginLeft="300dp"
                 android:layout_marginRight="300dp"
                 android:text="Down" />
+
+        <Button
+            android:id="@+id/buttonReload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="reloadConnect"
+            android:text="Button" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

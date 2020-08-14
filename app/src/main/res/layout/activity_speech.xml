@@ -16,4 +16,11 @@
         tools:layout_editor_absoluteY="246dp"
         android:onClick="getSpeechInput"
         tools:ignore="MissingConstraints" />
+    <Button
+        android:id="@+id/buttonReload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:onClick="reloadConnect"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

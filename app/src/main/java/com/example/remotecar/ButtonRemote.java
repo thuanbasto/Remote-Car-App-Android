@@ -24,6 +24,17 @@ public class ButtonRemote extends AppCompatActivity {
         setup();
     }
 
+    // SetOnClick cua button Reload
+    public void reloadConnect(View view){
+        if (!MainActivity.connectBT.Connect(MainActivity.connectBT.currentAddress)){
+            if (!MainActivity.connectBT.Connect(MainActivity.connectBT.currentAddress))
+                Toast.makeText(getBaseContext(), "Connect Failed", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_SHORT).show();
+        } else
+            Toast.makeText(getBaseContext(), "Connected", Toast.LENGTH_SHORT).show();
+    }
+
     private void setup(){
         buttonUp = (Button) findViewById(R.id.buttonUp);
         buttonDown = (Button) findViewById(R.id.buttonDown);

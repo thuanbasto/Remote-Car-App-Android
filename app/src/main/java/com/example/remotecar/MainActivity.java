@@ -25,12 +25,15 @@ public class MainActivity extends Activity {
     ListView listViewDevices;
 
     Context context;
+    // Mảng Adapter dùng để chuyển đổi dữ liệu giữa ListNameDevice và ListView
     private ArrayAdapter deviceAdapter;
+    // List lưu tên thiết bị
     private List<String> nameDevices = new ArrayList<String>();
+    // List lưu thiết bị
     private List<Device> devices = new ArrayList<>();
 
     public static ConnectBT connectBT;
-
+    // Adapter dùng để chuyển đỗi giữa HC-06 và Bluetooth
     private BluetoothAdapter btAdapter = null;
 
     @Override
@@ -66,13 +69,13 @@ public class MainActivity extends Activity {
         deviceAdapter.notifyDataSetChanged();
     }
 
+    // kiểm tra trạng thái của bluetooth
     private void checkBTState() {
-        // Check for Bluetooth support and then check to make sure it is turned on
-        // Emulator doesn't support Bluetooth and will return null
+        // Nếu null thì điện thoại không hỗ trợ
         if (btAdapter == null) {
             Toast.makeText(getBaseContext(), "Bluetooth doesn't support!", Toast.LENGTH_LONG).show();
             finish();
-        } else {
+        } else { // Nếu có thì yêu cầu người dùng bật Bluetooth
             if (btAdapter.isEnabled()) {
                 Log.d("Bluetooth", "...Bluetooth ON...");
             } else {
