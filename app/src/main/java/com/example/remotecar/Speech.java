@@ -57,5 +57,5 @@ public class Speech extends AppCompatActivity {
                 }
                 break;
         }
-    }
+}
 }
