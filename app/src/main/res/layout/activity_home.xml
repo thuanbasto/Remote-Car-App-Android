@@ -4,26 +4,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    tools:context=".MainActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rootRL"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="192dp"
+        tools:layout_editor_absoluteY="91dp"
+        >
 
-        <Button
-            android:id="@+id/buttonRemote"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="@android:dimen/thumbnail_height"
-            android:text="Button"
-            android:background="@android:color/holo_orange_light"/>
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="0dp"
+            >
 
-        <Button
-            android:id="@+id/buttonSpeech"
-            android:layout_width="match_parent"
-            android:layout_height="@android:dimen/thumbnail_height"
-            android:text="Speech"
-            android:background="@android:color/holo_green_dark"/>
 
-    </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/car"
+                tools:layout_editor_absoluteY="104dp" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="8sp"
+                android:text="Car Control"
+                android:textColor="@android:color/background_dark"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="128dp"
+                tools:layout_editor_absoluteY="155dp" />
+
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <Button
+                    android:id="@+id/buttonRemote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Control with button"
+                    android:drawableLeft="@drawable/button"
+                    tools:layout_editor_absoluteX="159dp"
+                    tools:layout_editor_absoluteY="445dp" />
+
+                <Button
+                    android:id="@+id/buttonSpeech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/microphone"
+                    android:text="Control with speech"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="512dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

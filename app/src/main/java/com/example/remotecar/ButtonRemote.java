@@ -11,7 +11,7 @@ import android.widget.SeekBar;
 import android.widget.Toast;
 
 public class ButtonRemote extends AppCompatActivity {
-    Button buttonUp,buttonDown,buttonLeft, buttonRight;
+    ImageButton buttonUp,buttonDown,buttonLeft, buttonRight;
     SeekBar speed;
     Context context;
 
@@ -36,10 +36,10 @@ public class ButtonRemote extends AppCompatActivity {
     }
 
     private void setup(){
-        buttonUp = (Button) findViewById(R.id.buttonUp);
-        buttonDown = (Button) findViewById(R.id.buttonDown);
-        buttonRight = (Button) findViewById(R.id.buttonRight);
-        buttonLeft = (Button) findViewById(R.id.buttonLeft);
+       buttonUp = (ImageButton) findViewById(R.id.buttonUp);
+        buttonDown = (ImageButton) findViewById(R.id.buttonDown);
+        buttonRight = (ImageButton) findViewById(R.id.buttonRight);
+        buttonLeft = (ImageButton) findViewById(R.id.buttonLeft);
         speed = (SeekBar) findViewById(R.id.seekBar);
 
         speed.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
