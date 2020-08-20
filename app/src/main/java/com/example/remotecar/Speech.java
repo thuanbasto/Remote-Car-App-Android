@@ -76,7 +76,7 @@ public class Speech extends AppCompatActivity {
                         MainActivity.connectBT.sendData("L");
                         timeStop(500);
                     }
-                    else if (result.get(0).contains("go back")) {
+                    else if (result.get(0).contains("go backward")) {
                         int time = getSecond(result.get(0));
                         MainActivity.connectBT.sendData("D");
                         // nếu không nói thời gian thì mặc định sẽ đi 2s và dừng lại
